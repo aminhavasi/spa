@@ -6,10 +6,10 @@ class Jumbotron extends Component {
         return (
             <div
                 id="section-top"
-                class="jumbotron jumbotron-fluid text-white d-flex justify-content-center aligin-items-center"
+                className="jumbotron jumbotron-fluid text-white d-flex justify-content-center aligin-items-center"
                 style={{ paddingTop: "5rem" }}
             >
-                <div class="container text-center">
+                <div className="container text-center">
                     <h1 className="display-1 text-primary text-uppercase">
                         pau
                     </h1>

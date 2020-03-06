@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import getPosts from "../services/fakePosts";
+import Like from "./like";
 class Posts extends Component {
     state = {
         posts: [],
@@ -19,6 +20,7 @@ class Posts extends Component {
                     <div
                         className="container-fluid col-12 col-md-10 col-lg-10 col-xs-12"
                         id="section-posts"
+                        key={post.id}
                     >
                         <div className="card shadow-lg bg-light m-2">
                             <article className="p-3">
@@ -38,7 +40,9 @@ class Posts extends Component {
                                 </div>
                                 <div className="card-body">
                                     <p className="lead">{post.postContent}</p>
+                                    <Like post={post} />
                                 </div>
+
                                 <div className="card-footer">
                                     <ul className="list-inline float-left">
                                         <li className="list-inline-item">

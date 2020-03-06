@@ -5,7 +5,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-md bg-primary navbar-dark fixed-top">
-                <p class="navbar-brand" href="#">
+                <p className="navbar-brand" href="#">
                     Amin havasi
                 </p>
                 <button

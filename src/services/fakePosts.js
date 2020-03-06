@@ -14,6 +14,7 @@ const posts = [
         postTitle: "least news",
         postDate: "4 july 2019",
         postTags: "test",
+        like: 10,
         postImageUrl: "https://via.placeholder.com/800x600",
         postContent:
             "Commodo do minim esse laboris ut consectetur reprehenderit eu enim reprehenderit ullamco cillum et id. Consectetur deserunt et ipsum anim nisi labore laborum sit cillum nulla non. Anim duis elit tempor aliqua nisi anim tempor excepteur Lorem laborum. Laboris duis dolore eu occaecat est excepteur nostrud. Excepteur deserunt commodo excepteur irure magna eu sunt mollit elit in adipisicing. In duis et dolor nulla elit do sit aliquip minim pariatur incididunt. Mollit reprehenderit eiusmod velit cillum excepteur."
@@ -33,6 +34,7 @@ const posts = [
         postTitle: "least news",
         postDate: "4 july 2019",
         postTags: "test",
+        like: 99,
         postImageUrl: "https://via.placeholder.com/800x600",
         postContent:
             "Commodo do minim esse laboris ut consectetur reprehenderit eu enim reprehenderit ullamco cillum et id. Consectetur deserunt et ipsum anim nisi labore laborum sit cillum nulla non. Anim duis elit tempor aliqua nisi anim tempor excepteur Lorem laborum. Laboris duis dolore eu occaecat est excepteur nostrud. Excepteur deserunt commodo excepteur irure magna eu sunt mollit elit in adipisicing. In duis et dolor nulla elit do sit aliquip minim pariatur incididunt. Mollit reprehenderit eiusmod velit cillum excepteur."
@@ -42,6 +44,7 @@ const posts = [
         postTitle: "least news",
         postDate: "4 july 2019",
         postTags: "test",
+        like: 105,
         postImageUrl: "https://via.placeholder.com/800x600",
         postContent:
             "Commodo do minim esse laboris ut consectetur reprehenderit eu enim reprehenderit ullamco cillum et id. Consectetur deserunt et ipsum anim nisi labore laborum sit cillum nulla non. Anim duis elit tempor aliqua nisi anim tempor excepteur Lorem laborum. Laboris duis dolore eu occaecat est excepteur nostrud. Excepteur deserunt commodo excepteur irure magna eu sunt mollit elit in adipisicing. In duis et dolor nulla elit do sit aliquip minim pariatur incididunt. Mollit reprehenderit eiusmod velit cillum excepteur."
@@ -51,6 +54,7 @@ const posts = [
         postTitle: "least news",
         postDate: "4 july 2019",
         postTags: "test",
+        like: 56,
         postImageUrl: "https://via.placeholder.com/800x600",
         postContent:
             "Commodo do minim esse laboris ut consectetur reprehenderit eu enim reprehenderit ullamco cillum et id. Consectetur deserunt et ipsum anim nisi labore laborum sit cillum nulla non. Anim duis elit tempor aliqua nisi anim tempor excepteur Lorem laborum. Laboris duis dolore eu occaecat est excepteur nostrud. Excepteur deserunt commodo excepteur irure magna eu sunt mollit elit in adipisicing. In duis et dolor nulla elit do sit aliquip minim pariatur incididunt. Mollit reprehenderit eiusmod velit cillum excepteur."
@@ -69,6 +73,7 @@ const posts = [
         postTitle: "least news",
         postDate: "4 july 2019",
         postTags: "test",
+        like: 45,
         postImageUrl: "https://via.placeholder.com/800x600",
         postContent:
             "Commodo do minim esse laboris ut consectetur reprehenderit eu enim reprehenderit ullamco cillum et id. Consectetur deserunt et ipsum anim nisi labore laborum sit cillum nulla non. Anim duis elit tempor aliqua nisi anim tempor excepteur Lorem laborum. Laboris duis dolore eu occaecat est excepteur nostrud. Excepteur deserunt commodo excepteur irure magna eu sunt mollit elit in adipisicing. In duis et dolor nulla elit do sit aliquip minim pariatur incididunt. Mollit reprehenderit eiusmod velit cillum excepteur."
@@ -78,6 +83,7 @@ const posts = [
         postTitle: "least news",
         postDate: "4 july 2019",
         postTags: "test",
+        like: 14,
         postImageUrl: "https://via.placeholder.com/800x600",
         postContent:
             "Commodo do minim esse laboris ut consectetur reprehenderit eu enim reprehenderit ullamco cillum et id. Consectetur deserunt et ipsum anim nisi labore laborum sit cillum nulla non. Anim duis elit tempor aliqua nisi anim tempor excepteur Lorem laborum. Laboris duis dolore eu occaecat est excepteur nostrud. Excepteur deserunt commodo excepteur irure magna eu sunt mollit elit in adipisicing. In duis et dolor nulla elit do sit aliquip minim pariatur incididunt. Mollit reprehenderit eiusmod velit cillum excepteur."
@@ -98,6 +104,7 @@ const posts = [
         postDate: "4 july 2019",
         postTags: "test",
         postImageUrl: "https://via.placeholder.com/800x600",
+        like: 111,
         postContent:
             "Commodo do minim esse laboris ut consectetur reprehenderit eu enim reprehenderit ullamco cillum et id. Consectetur deserunt et ipsum anim nisi labore laborum sit cillum nulla non. Anim duis elit tempor aliqua nisi anim tempor excepteur Lorem laborum. Laboris duis dolore eu occaecat est excepteur nostrud. Excepteur deserunt commodo excepteur irure magna eu sunt mollit elit in adipisicing. In duis et dolor nulla elit do sit aliquip minim pariatur incididunt. Mollit reprehenderit eiusmod velit cillum excepteur."
     },
@@ -116,6 +123,7 @@ const posts = [
         postDate: "4 july 2019",
         postTags: "test",
         postImageUrl: "https://via.placeholder.com/800x600",
+        like: 101,
         postContent:
             "Commodo do minim esse laboris ut consectetur reprehenderit eu enim reprehenderit ullamco cillum et id. Consectetur deserunt et ipsum anim nisi labore laborum sit cillum nulla non. Anim duis elit tempor aliqua nisi anim tempor excepteur Lorem laborum. Laboris duis dolore eu occaecat est excepteur nostrud. Excepteur deserunt commodo excepteur irure magna eu sunt mollit elit in adipisicing. In duis et dolor nulla elit do sit aliquip minim pariatur incididunt. Mollit reprehenderit eiusmod velit cillum excepteur."
     },
