@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { getDefaultNormalizer } from "@testing-library/react";
 
 class Description extends Component {
     render() {
