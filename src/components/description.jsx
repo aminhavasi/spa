@@ -4,8 +4,8 @@ import { getDefaultNormalizer } from "@testing-library/react";
 class Description extends Component {
     render() {
         return (
-            <div className="container">
-                <section id="section-description">
+            <div className="container mt-5" id="section-description">
+                <section>
                     <h2 className="text-center display-4">
                         Description myself
                     </h2>

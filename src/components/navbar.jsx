@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Navbar extends Component {
     render() {
@@ -18,24 +19,32 @@ class Navbar extends Component {
                 <div className="collapse navbar-collapse" id="navabrNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a href="#section-description" className="nav-link">
-                                Description
-                            </a>
+                            <Link to="#section-top" className="nav-link">
+                                Top page
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="section-skills" className="nav-link">
+                            <Link
+                                to="#section-description"
+                                className="nav-link"
+                            >
+                                Description
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="#section-skills" className="nav-link">
                                 Skills
-                            </a>
+                            </Link>
                         </li>{" "}
                         <li className="nav-item">
-                            <a href="section-posts" className="nav-link">
+                            <Link to="section-posts" className="nav-link">
                                 posts
-                            </a>
+                            </Link>
                         </li>{" "}
                         <li className="nav-item">
-                            <a href="section-contactus" className="nav-link">
+                            <Link to="section-contactus" className="nav-link">
                                 contact us
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
