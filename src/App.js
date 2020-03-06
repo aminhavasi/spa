@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "./components/navbar";
-import Description from "./components/description";
+import Jumbotron from "./components/jumbotron";
 function App() {
     return (
         <div className="App">
             <Navbar />
 
-            <Description />
+            <Jumbotron />
         </div>
     );
 }
