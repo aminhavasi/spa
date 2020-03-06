@@ -130,6 +130,7 @@ class Skills extends Component {
                         </div>
                     </div>
                     <br />
+                    <hr />
                 </div>
             </section>
         );
