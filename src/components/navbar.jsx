@@ -37,12 +37,12 @@ class Navbar extends Component {
                             </Link>
                         </li>{" "}
                         <li className="nav-item">
-                            <Link to="section-posts" className="nav-link">
+                            <Link to="#section-posts" className="nav-link">
                                 posts
                             </Link>
                         </li>{" "}
                         <li className="nav-item">
-                            <Link to="section-contactus" className="nav-link">
+                            <Link to="#section-contactus" className="nav-link">
                                 contact us
                             </Link>
                         </li>
