@@ -22,11 +22,17 @@ class Description extends Component {
                     <p>
                         <strong>Follow me on social network:</strong>
                     </p>
-                    <a href="#" className="btn btn-lg btn-primary m-1">
+                    <a
+                        href="https://instagram.com"
+                        className="btn btn-lg btn-primary m-1"
+                    >
                         <i className="fa fa-instagram">Instagram</i>
                     </a>
-                    <a href="#" className="btn btn-lg btn-primary ">
-                        <i className="fa fa-twitter">twwiter</i>
+                    <a
+                        href="https://twitter.com"
+                        className="btn btn-lg btn-primary "
+                    >
+                        <i className="fa fa-twitter">twitter</i>
                     </a>
                 </div>
             </div>
