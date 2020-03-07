@@ -41,11 +41,6 @@ class Navbar extends Component {
                                 posts
                             </Link>
                         </li>{" "}
-                        <li className="nav-item">
-                            <Link to="#section-contactus" className="nav-link">
-                                contact us
-                            </Link>
-                        </li>
                     </ul>
                 </div>
             </nav>
