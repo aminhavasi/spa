@@ -28,6 +28,16 @@ class Posts extends Component {
     };
     render() {
         const { pageSize, currentPage } = this.state;
+        const count = this.state.posts.length;
+
+        if (count === 0)
+            return (
+                <div className=" container text-center">
+                    <hr />
+                    <p> there are no post for display</p>
+                    <hr />
+                </div>
+            );
         const { data, totalCount } = this.getPageData();
         return (
             <React.Fragment>
