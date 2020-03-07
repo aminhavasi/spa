@@ -4,6 +4,7 @@ import Jumbotron from "./components/jumbotron";
 import Description from "./components/description";
 import Skills from "./components/skills";
 import Posts from "./components/post";
+import Footer from "./components/footer";
 function App() {
     return (
         <div className="App">
@@ -13,6 +14,7 @@ function App() {
             <Description />
             <Skills />
             <Posts />
+            <Footer />
         </div>
     );
 }
