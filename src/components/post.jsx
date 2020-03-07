@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import getPosts from "../services/fakePosts";
 import Like from "./like";
+import Pagination from "./pagination";
+import { paginate } from "./../utils/paginate";
 class Posts extends Component {
     state = {
         posts: [],
@@ -12,11 +14,24 @@ class Posts extends Component {
         const posts = getPosts();
         this.setState({ posts });
     }
+    handelPageChange = page => {
+        this.setState({ currentPage: page });
+    };
+    getPageData = () => {
+        const { pageSize, currentPage, posts: allposts } = this.state;
+        const posts = paginate(allposts, currentPage, pageSize);
+
+        return {
+            totalCount: allposts.length,
+            data: posts
+        };
+    };
     render() {
-        const { posts } = this.state;
+        const { pageSize, currentPage } = this.state;
+        const { data, totalCount } = this.getPageData();
         return (
             <React.Fragment>
-                {posts.map(post => (
+                {data.map(post => (
                     <div
                         className="container-fluid col-12 col-md-10 col-lg-10 col-xs-12"
                         id="section-posts"
@@ -58,6 +73,12 @@ class Posts extends Component {
                         </div>
                     </div>
                 ))}
+                <Pagination
+                    itemCount={totalCount}
+                    pageSize={pageSize}
+                    currentPage={currentPage}
+                    onPageChange={this.handelPageChange}
+                />
             </React.Fragment>
         );
     }
