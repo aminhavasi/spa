@@ -3,6 +3,7 @@ import Navbar from './navbar';
 import Sidebar from './sidebar';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Cpost from './createPost';
+import AllPosts from './allpost';
 
 function Dashboard() {
     return (
@@ -15,6 +16,7 @@ function Dashboard() {
             >
                 <Switch>
                     <Route path="/admin/create-post" component={Cpost} />
+                    <Route path="/admin/allposts" component={AllPosts} />
                 </Switch>
             </main>
         </div>
