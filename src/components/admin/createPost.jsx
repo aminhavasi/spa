@@ -9,9 +9,12 @@ class Cpost extends Component {
         postTags: []
     };
 
-    handleSubmit = e => {
+    handleSubmit = async e => {
         e.preventDefault();
-        console.log(this.state);
+        const result = await axios.post(
+            'http://localhost:8000/api/post',
+            this.state
+        );
     };
     render() {
         return (
