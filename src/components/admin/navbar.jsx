@@ -8,14 +8,14 @@ class Navbar extends Component {
                 <a className="navbar-brand text-white">hello amin</a>
                 <p className="mt-auto" style={{ color: 'white' }}>
                     posts number:
-                    <span className="badge badge-warning badge-pill m-1">
+                    <span className="badge badge-primary badge-pill m-1">
                         {' '}
                         20
                     </span>
                 </p>
                 <p className="mt-auto" style={{ color: 'white' }}>
                     course number:
-                    <span className="badge badge-warning badge-pill m-1">
+                    <span className="badge badge-primary badge-pill m-1">
                         {' '}
                         5
                     </span>

@@ -9,7 +9,7 @@ class Sidebar extends Component {
         return (
             <div style={{ direction: 'rtl' }}>
                 <nav className="col-md-2 d-none d-md-block bg-dark  sidebar ">
-                    <hr style={{ border: '1px solid yellow' }} />
+                    <hr style={{ border: '1px solid ' }} />
                     <div className="sidebar-sticky">
                         <ul className="nav " style={{ paddingRight: '0' }}>
                             {adminNavLinks.map(nav => (

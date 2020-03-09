@@ -48,7 +48,7 @@ class AllPosts extends Component {
                                 <td>{post.like}</td>
                                 <td>
                                     <button
-                                        className="btn btn-primary "
+                                        className="btn btn-dark "
                                         onClick=""
                                     >
                                         edit
@@ -56,7 +56,7 @@ class AllPosts extends Component {
                                 </td>
                                 <td>
                                     <button
-                                        className="btn btn-danger "
+                                        className="btn btn-primary "
                                         onClick=""
                                     >
                                         delete
