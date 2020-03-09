@@ -2,13 +2,16 @@ import React from 'react';
 import Navbar from './navbar';
 import Sidebar from './sidebar';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import Cpost from './createPost';
 import AllPosts from './allpost';
 import MainAdmin from './admin';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Dashboard() {
     return (
         <div>
+            <ToastContainer />
             <Navbar />
             <Sidebar />
             <main

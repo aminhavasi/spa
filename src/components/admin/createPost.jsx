@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
+import axios from 'axios';
 class Cpost extends Component {
     state = {
         postTitle: '',
