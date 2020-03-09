@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 class Cpost extends Component {
     state = {
         postTitle: '',
@@ -11,10 +12,16 @@ class Cpost extends Component {
 
     handleSubmit = async e => {
         e.preventDefault();
-        const result = await axios.post(
-            'http://localhost:8000/api/post',
-            this.state
-        );
+        try {
+            const result = await axios.post(
+                'http://localhost:8000/api/post',
+                this.state
+            );
+            if (result.status === 200) toast.success('ok');
+        } catch (err) {
+            if (err.response && err.response.status === 400)
+                toast.error('fill all fields');
+        }
     };
     render() {
         return (
