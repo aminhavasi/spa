@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import _ from "lodash";
-import propTypes from "prop-types";
+import React, { Component } from 'react';
+import _ from 'lodash';
+import propTypes from 'prop-types';
 
 class Pagination extends Component {
     render() {
@@ -15,10 +15,11 @@ class Pagination extends Component {
                 <ul className="pagination justify-content-center">
                     {pages.map(page => (
                         <li
+                            style={{ cursor: 'pointer' }}
                             className={
                                 page === currentPage
-                                    ? "page-item active"
-                                    : "page-item"
+                                    ? 'page-item active'
+                                    : 'page-item'
                             }
                             key={page}
                         >
