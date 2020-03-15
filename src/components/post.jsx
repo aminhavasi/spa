@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import getPosts from "../services/fakePosts";
-import Like from "./like";
-import Pagination from "./pagination";
-import { paginate } from "./../utils/paginate";
+import React, { Component } from 'react';
+import { getPost } from './../services/postService';
+import Like from './like';
+import Pagination from './pagination';
+import { paginate } from './../utils/paginate';
 class Posts extends Component {
     state = {
         posts: [],
@@ -10,10 +10,11 @@ class Posts extends Component {
         pageSize: 5
     };
 
-    componentDidMount() {
-        const posts = getPosts();
-        this.setState({ posts });
+    async componentDidMount() {
+        const { data } = await getPost();
+        this.setState({ posts: data });
     }
+
     handelPageChange = page => {
         this.setState({ currentPage: page });
     };
@@ -45,7 +46,7 @@ class Posts extends Component {
                     <div
                         className="container-fluid col-12 col-md-10 col-lg-10 col-xs-12"
                         id="section-posts"
-                        key={post.id}
+                        key={post._id}
                     >
                         <div className="card shadow-lg bg-light m-2">
                             <article className="p-3">

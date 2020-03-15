@@ -16,3 +16,7 @@ export function updatePost(post) {
 
     return http.put(`${config.api_post}/${post._id}`, body);
 }
+
+export function getPostCount() {
+    return http.get(config.api_post + '/count');
+}
