@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import getPosts from './../../services/fakePosts';
+import { getPost } from '../../services/postService';
 import { paginate } from './../../utils/paginate';
 import Pagination from './../pagination';
+import axios from 'axios';
 
 class AllPosts extends Component {
     state = {
@@ -9,9 +10,9 @@ class AllPosts extends Component {
         currentPage: 1,
         pageSize: 5
     };
-    componentDidMount() {
-        const posts = getPosts();
-        this.setState({ posts });
+    async componentDidMount() {
+        const { data } = await getPost();
+        this.setState({ posts: data });
     }
     handelPageChange = page => {
         this.setState({ currentPage: page });
