@@ -17,7 +17,7 @@ class EditPost extends Component {
         if (!post) return this.props.history.push('/admin/allposts');
         this.setState({
             _id: post._id,
-            postDate: post.postTitle,
+            postDate: post.postDate,
             postTitle: post.postTitle,
             postImageUrl: post.postImageUrl,
             postContent: post.postContent,
