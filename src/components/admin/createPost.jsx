@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import axios from 'axios';
+import { createPost } from '../../services/postService';
 import { toast } from 'react-toastify';
 import config from './../../config.json';
 class Cpost extends Component {
@@ -14,7 +14,7 @@ class Cpost extends Component {
     handleSubmit = async e => {
         e.preventDefault();
         try {
-            const result = await axios.post(config.apu_post, this.state);
+            const result = await createPost(this.state);
             if (result.status === 200) toast.success('ok');
         } catch (err) {
             if (err.response && err.response.status === 400)
