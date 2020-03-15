@@ -9,8 +9,10 @@ export function getPost() {
 export function deletePost(postId) {
     return http.delete(config.api_post + '/' + postId);
 }
+
 export function updatePost(post) {
-    const body = [...post];
+    const body = { ...post };
     delete body._id;
+
     return http.put(`${config.api_post}/${post._id}`, body);
 }

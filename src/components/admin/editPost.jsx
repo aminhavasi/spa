@@ -28,10 +28,11 @@ class EditPost extends Component {
 
     handleSubmit = async e => {
         e.preventDefault();
+
         try {
             const result = await updatePost(this.state);
             if (result.status === 200) {
-                toast.success('ok');
+                toast.success('edited post');
                 this.props.history.push('/admin/allposts');
             }
         } catch (err) {

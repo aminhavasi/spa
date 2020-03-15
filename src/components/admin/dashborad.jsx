@@ -7,6 +7,7 @@ import Cpost from './createPost';
 import AllPosts from './allpost';
 import MainAdmin from './admin';
 import 'react-toastify/dist/ReactToastify.css';
+import EditPost from './editPost';
 
 function Dashboard() {
     return (
@@ -22,6 +23,7 @@ function Dashboard() {
                     <Route exact path="/admin" component={MainAdmin} />
                     <Route path="/admin/create-post" component={Cpost} />
                     <Route path="/admin/allposts" component={AllPosts} />
+                    <Route path="/admin/editpost" component={EditPost} />
                 </Switch>
             </main>
         </div>

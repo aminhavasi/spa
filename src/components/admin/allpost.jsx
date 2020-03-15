@@ -32,6 +32,12 @@ class AllPosts extends Component {
             this.setState({ posts: orginalPost });
         }
     };
+    handleEdit = post => {
+        this.props.history.push({
+            pathname: '/admin/editpost',
+            post
+        });
+    };
     getPageData = () => {
         const { pageSize, currentPage, posts: allposts } = this.state;
         const posts = paginate(allposts, currentPage, pageSize);
@@ -66,7 +72,7 @@ class AllPosts extends Component {
                                 <td>
                                     <button
                                         className="btn btn-dark "
-                                        onClick=""
+                                        onClick={() => this.handleEdit(post)}
                                     >
                                         edit
                                     </button>
