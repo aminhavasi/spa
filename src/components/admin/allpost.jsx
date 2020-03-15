@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { getPost } from '../../services/postService';
+import { getPost, deletePost } from '../../services/postService';
 import { paginate } from './../../utils/paginate';
 import Pagination from './../pagination';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 class AllPosts extends Component {
     state = {
@@ -17,6 +18,20 @@ class AllPosts extends Component {
     handelPageChange = page => {
         this.setState({ currentPage: page });
     };
+    hendleDelete = async postId => {
+        const orginalPost = this.state.posts;
+        const posts = this.state.posts.filter(p => postId !== p._id);
+        this.setState({ posts });
+
+        try {
+            const result = await deletePost(postId);
+            if (result.status === 200) toast.success('success delete');
+        } catch (ex) {
+            if (ex.response && ex.response.status === 404)
+                toast.error('not found post with this id');
+            this.setState({ posts: orginalPost });
+        }
+    };
     getPageData = () => {
         const { pageSize, currentPage, posts: allposts } = this.state;
         const posts = paginate(allposts, currentPage, pageSize);
@@ -29,6 +44,7 @@ class AllPosts extends Component {
     render() {
         const { pageSize, currentPage } = this.state;
         const { totalCount, data } = this.getPageData();
+        let count = 1;
         return (
             <div className="bg-light m-3 p-4 border rounded ">
                 <table className="table">
@@ -42,11 +58,11 @@ class AllPosts extends Component {
                     </thead>
                     <tbody>
                         {data.map(post => (
-                            <tr key={post.id}>
-                                <th scope="row">{post.id}</th>
+                            <tr key={post._id}>
+                                <th scope="row">{count++}</th>
                                 <td>{post.postTitle}</td>
                                 <td>{post.postDate}</td>
-                                <td>{post.like}</td>
+                                <td>{post.postLike}</td>
                                 <td>
                                     <button
                                         className="btn btn-dark "
@@ -58,7 +74,9 @@ class AllPosts extends Component {
                                 <td>
                                     <button
                                         className="btn btn-primary "
-                                        onClick=""
+                                        onClick={() =>
+                                            this.hendleDelete(post._id)
+                                        }
                                     >
                                         delete
                                     </button>

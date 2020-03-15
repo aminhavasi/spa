@@ -6,3 +6,6 @@ export function createPost(post) {
 export function getPost() {
     return http.get(config.api_post);
 }
+export function deletePost(postId) {
+    return http.delete(config.api_post + '/' + postId);
+}
