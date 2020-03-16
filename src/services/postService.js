@@ -20,3 +20,6 @@ export function updatePost(post) {
 export function getPostCount() {
     return http.get(config.api_post + '/count');
 }
+export function incLike(postId) {
+    http.put(`${config.api_post}/like/${postId}`);
+}

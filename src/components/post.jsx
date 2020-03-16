@@ -21,7 +21,7 @@ class Posts extends Component {
     getPageData = () => {
         const { pageSize, currentPage, posts: allposts } = this.state;
         const posts = paginate(allposts, currentPage, pageSize);
-
+        console.log(posts);
         return {
             totalCount: allposts.length,
             data: posts
