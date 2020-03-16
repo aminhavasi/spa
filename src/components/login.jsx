@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { login } from '../services/loginservice';
 import { ToastContainer, toast } from 'react-toastify';
+import { Redirect } from 'react-router-dom';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 class Login extends Component {
@@ -14,7 +16,8 @@ class Login extends Component {
         try {
             const { data } = await login(this.state.email, this.state.password);
             await localStorage.setItem('token', data);
-            this.props.history.replcae('/admin');
+
+            window.location = '/admin';
         } catch (error) {
             console.log(error);
             if (error.response && error.response.status === 400) {
