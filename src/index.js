@@ -8,8 +8,33 @@ import Dashboard from './components/admin/dashborad';
 ReactDOM.render(
     <BrowserRouter>
         <Switch>
-            <Route path="/login" component={Login} />
-            <Route path="/admin" component={Dashboard} />
+            <Route
+                path="/login"
+                // render={() => {
+                //     if (localStorage.getItem('token')) {
+                //         return <Redirect to="/admin" />;
+                //     } else {
+                //         return <Login />;
+                //     }
+                // }}
+                component={() => {
+                    if (localStorage.getItem('token')) {
+                        return <Redirect to="/admin" />;
+                    } else {
+                        return <Login />;
+                    }
+                }}
+            />
+            <Route
+                path="/admin"
+                render={() => {
+                    if (localStorage.getItem('token')) {
+                        return <Dashboard />;
+                    } else {
+                        return <Redirect to="/" />;
+                    }
+                }}
+            />
 
             <Route path="/not-found" component={NotFound} />
             <Route exact path="/" component={App} />

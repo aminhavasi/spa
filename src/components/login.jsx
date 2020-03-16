@@ -13,8 +13,8 @@ class Login extends Component {
         e.preventDefault();
         try {
             const { data } = await login(this.state.email, this.state.password);
-            localStorage.setItem('token', data);
-            this.props.history.replace('/admin');
+            await localStorage.setItem('token', data);
+            this.props.history.replcae('/admin');
         } catch (error) {
             console.log(error);
             if (error.response && error.response.status === 400) {
