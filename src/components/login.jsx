@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { login } from '../services/loginservice';
 import { ToastContainer, toast } from 'react-toastify';
-import { Redirect } from 'react-router-dom';
 
 import 'react-toastify/dist/ReactToastify.css';
 
