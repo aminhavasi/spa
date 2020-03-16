@@ -22,7 +22,7 @@ class Navbar extends Component {
 
                 <ul className="navbar-nav px-3">
                     <li className="nav-item text-nowrap">
-                        <Link className="nav-link" to="/home">
+                        <Link className="nav-link" to="/admin/logout">
                             exit
                         </Link>
                     </li>
