@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
+import { login } from '../services/loginservice';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 class Login extends Component {
-    handleLogin = e => {
+    state = {
+        email: '',
+        password: ''
+    };
+
+    handleLogin = async e => {
         e.preventDefault();
-        this.props.history.replace('/');
+        try {
+            const { data } = await login(this.state.email, this.state.password);
+            localStorage.setItem('token', data);
+            this.props.history.replace('/admin');
+        } catch (error) {
+            console.log(error);
+            if (error.response && error.response.status === 400) {
+                toast.error('email or password is wrong');
+            }
+        }
     };
     render() {
         return (
@@ -14,6 +32,7 @@ class Login extends Component {
                 }}
                 className="justify-content-center align-items-center"
             >
+                <ToastContainer />
                 <div className="row">
                     <div className="">
                         <h3 className="text-center">Login</h3>
@@ -32,6 +51,12 @@ class Login extends Component {
                                         className="form-control"
                                         placeholder="example@info.com"
                                         id="email"
+                                        value={this.state.email}
+                                        onChange={e =>
+                                            this.setState({
+                                                email: e.target.value
+                                            })
+                                        }
                                     />
                                 </div>
                                 <div className="form-group col-12 col-sm-6 col-xs-6 col-lg-6">
@@ -41,6 +66,12 @@ class Login extends Component {
                                         className="form-control"
                                         placeholder="********"
                                         id="password"
+                                        value={this.state.password}
+                                        onChange={e =>
+                                            this.setState({
+                                                password: e.target.value
+                                            })
+                                        }
                                     />
                                 </div>
                             </div>
